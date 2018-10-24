@@ -10,7 +10,7 @@ class SmartSubmit extends React.Component {
   }
   render() {
     return this.props.children({
-      disable: this.state.disabled,
+      disabled: this.state.disabled,
       onChange: this.onChange
     })
   }
