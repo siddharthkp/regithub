@@ -20,7 +20,7 @@ cd regithub
 
 yarn
 
-yarn start
+yarn dev
 ```
 
 &nbsp;
