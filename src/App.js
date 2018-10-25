@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import axios from 'axios'
-import Header from './components/common/header'
-import Spinner from './components/common/spinner'
-import UserInfo from './components/user-info'
-import UserForm from './components/user-form'
-import Repositories from './components/repositories'
 import './App.css'
+
+import Header from './components/common/header'
+import UserForm from './components/user-form'
+// import UserInfo from './components/user-info'
+// import Repositories from './components/repositories'
+
+const UserInfo = lazy(() => import('./components/user-info'))
+const Repositories = lazy(() => import('./components/repositories'))
 
 class App extends React.Component {
   constructor(props) {
@@ -21,15 +24,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Header />
         <UserForm onUserChange={this.onUserChange} />
-        {this.state.loading ? <Spinner /> : null}
+
+        {this.state.loading ? (
+          <div className="message">fetching data...</div>
+        ) : null}
+
         {this.state.data.repos ? (
-          <React.Fragment>
-            <UserInfo data={this.state.data} />
-            <Repositories repos={this.state.data.repos} />
-          </React.Fragment>
+          <div>
+            <Suspense
+              fallback={<div className="message">fetching component</div>}
+            >
+              <UserInfo data={this.state.data} />
+              <Repositories repos={this.state.data.repos} />
+            </Suspense>
+          </div>
         ) : null}
       </div>
     )

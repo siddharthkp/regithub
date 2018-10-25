@@ -135,7 +135,7 @@ img.avatar {
   border-radius: 2px;
   text-align: center;
   box-sizing: border-box;
-  margin: 70px auto 0;
+  margin: 30px auto 0;
   padding: 30px 50px;
   width: 500px;
   min-height: 100px;
@@ -156,8 +156,14 @@ img.avatar {
   height: 50px;
   border: 3px solid #aaa;
   border-radius: 50%;
-  border-top-color: #042132;
+  border-top-color: #555;
   animation: spin 1s ease-in-out infinite;
+}
+.spinner.blue {
+  border-top-color: blue;
+}
+.spinner.red {
+  border-top-color: red;
 }
 
 @keyframes spin {
@@ -169,4 +175,11 @@ img.avatar {
   to {
     -webkit-transform: rotate(360deg);
   }
+}
+
+.message {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  color: #042132;
 }
