@@ -5,7 +5,8 @@ import SmartSubmit from './smart-submit'
 class UserForm extends React.Component {
   onSubmit = event => {
     event.preventDefault()
-    this.props.onUserChange({ username: event.target[0].value })
+    const form = event.target
+    this.props.onUserChange({ username: form.elements.username.value })
   }
   render() {
     return (
@@ -18,6 +19,7 @@ class UserForm extends React.Component {
                 <input
                   onChange={onChange}
                   type="text"
+                  name="username"
                   placeholder="github username"
                 />
                 <button type="submit" disabled={disabled}>

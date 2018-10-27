@@ -29,6 +29,7 @@
     "singleQuote": true
   },
   "devDependencies": {
+    "react-testing-library": "5.2.3",
     "serve": "10.0.2"
   }
 }
