@@ -176,10 +176,3 @@ img.avatar {
     -webkit-transform: rotate(360deg);
   }
 }
-
-.message {
-  text-align: center;
-  margin: 20px;
-  font-size: 18px;
-  color: #042132;
-}
