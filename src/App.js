@@ -1,50 +1,44 @@
-import React, { lazy, Suspense } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import './App.css'
 
 import Header from './components/common/header'
+import Spinner from './components/common/spinner'
 import UserForm from './components/user-form'
-// import UserInfo from './components/user-info'
-// import Repositories from './components/repositories'
+import UserInfo from './components/user-info'
+import Repositories from './components/repositories'
 
-const UserInfo = lazy(() => import('./components/user-info'))
-const Repositories = lazy(() => import('./components/repositories'))
+const App = () => {
+  const [data, setData] = useState({})
+  const [loading, setLoading] = useState(false)
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { data: {}, loading: false }
-  }
-  onUserChange = ({ username }) => {
-    this.setState({ data: {}, loading: true })
+  const onUserChange = ({ username }) => {
+    setData({})
+    setLoading(true)
     axios
       .get(`https://github-user.now.sh/?username=${username}`)
-      .then(response => this.setState({ data: response.data, loading: false }))
+      .then(response => {
+        setData(response.data)
+        setLoading(false)
+      })
   }
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <UserForm onUserChange={this.onUserChange} />
+  return (
+    <div className="App">
+      <Header />
 
-        {this.state.loading ? (
-          <div className="message">fetching data...</div>
-        ) : null}
+      <UserForm onUserChange={onUserChange} />
 
-        {this.state.data.repos ? (
-          <div>
-            <Suspense
-              fallback={<div className="message">fetching component</div>}
-            >
-              <UserInfo data={this.state.data} />
-              <Repositories repos={this.state.data.repos} />
-            </Suspense>
-          </div>
-        ) : null}
-      </div>
-    )
-  }
+      {loading ? <Spinner /> : null}
+
+      {data.repos ? (
+        <div>
+          <UserInfo data={data} />
+          <Repositories repos={data.repos} />
+        </div>
+      ) : null}
+    </div>
+  )
 }
 
 export default App
