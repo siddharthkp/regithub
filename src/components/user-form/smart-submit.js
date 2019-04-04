@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import React from 'react'
 
-const SmartSubmit = props => {
-  const [disabled, setDisabled] = useState(true)
+function useSmartSubmit() {
+  const [disabled, setDisabled] = React.useState(true)
 
   const onChange = event => {
     setDisabled(event.target.value.length === 0)
   }
 
-  return props.children({ disabled, onChange })
+  return [disabled, onChange]
 }
 
-export default SmartSubmit
+export default useSmartSubmit
