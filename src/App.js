@@ -4,7 +4,7 @@ import './App.css'
 
 import Header from './components/common/header'
 import Spinner from './components/common/spinner'
-import UserForm from './components/user-form'
+import LoginScreen from './components/user-form'
 import UserInfo from './components/user-info'
 import Repositories from './components/repositories'
 
@@ -27,16 +27,9 @@ const App = () => {
     <div className="App">
       <Header />
 
-      <UserForm onUserChange={onUserChange} />
+      <LoginScreen user={{ name: 'Sid' }} onSubmit={onUserChange} />
 
       {loading ? <Spinner /> : null}
-
-      {data.repos ? (
-        <div>
-          <UserInfo data={data} />
-          <Repositories repos={data.repos} />
-        </div>
-      ) : null}
     </div>
   )
 }
