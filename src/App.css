@@ -164,7 +164,7 @@ img.avatar {
   margin: 30px auto;
 }
 
-.login-screen .welcome {
+.login-screen > div {
   margin: 30px auto;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../common/logo'
+import Avatar from '../common/avatar'
 import Form from '../common/form'
 
 class LoginScreen extends React.Component {
@@ -7,7 +7,7 @@ class LoginScreen extends React.Component {
     super(props)
     this.state = {
       disabled: true,
-      name: props.user.name
+      name: props.user.name.first
     }
   }
   onChange = event => {
@@ -23,9 +23,9 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <div className="login-screen">
-        <Logo big="true" />
+        <Avatar />
 
-        <div className="welcome">Welcome back, {this.state.name}!</div>
+        <div>Welcome back, {this.state.name}!</div>
 
         <Form onSubmit={this.onSubmit}>
           <input
