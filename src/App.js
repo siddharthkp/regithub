@@ -51,7 +51,7 @@ const App = () => {
     setTimeout(function() {
       navigate('/profile')
       setLoading(false)
-    }, 2000)
+    }, 1000)
   }
 
   let Login = () => (
@@ -71,6 +71,7 @@ const App = () => {
         <Profile path="profile" />
         <Bye path="/bye" />
       </Router>
+      <InvisibleText />
     </div>
   )
 }
@@ -78,3 +79,17 @@ const App = () => {
 export default App
 
 function noop() {}
+
+function InvisibleText() {
+  return (
+    <div class="invisible">
+      Give names to behavior not interaction
+      <br />
+      Aim for a minimal API surface area
+      <br />
+      Order of props is important
+      <br />
+      Single responsibility principle
+    </div>
+  )
+}
