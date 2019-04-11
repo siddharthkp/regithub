@@ -21,11 +21,10 @@ function Profile(props) {
           sid.studio/newsletter
         </a>
       </div>
-      <a href="/login" className="start">
-        <span role="img" aria-label="bye">
-          👋
-        </span>
-      </a>
+
+      <span role="img" aria-label="bye">
+        👋
+      </span>
     </div>
   )
 }
