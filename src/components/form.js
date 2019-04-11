@@ -1,5 +1,7 @@
 import React from 'react'
 
+// const FormContext = React.createContext({})
+
 function Form(props) {
   return (
     <form className="form" onSubmit={props.onSubmit}>
@@ -8,10 +10,6 @@ function Form(props) {
   )
 }
 
-Form.defaultProps = {
-  className: ''
-}
-
-// Form.Context = React.createContext()
+// Form.Context = FormContext
 
 export default Form

@@ -30,8 +30,8 @@ export default Switch
 function useFormContext(props) {
   let disabled = props.disabled
 
-  const context = React.useContext(Form.Context || {})
-  if (context) disabled = context.disabled
+  // const context = React.useContext(Form.Context || {})
+  // if (context) disabled = context.disabled
 
   return { disabled }
 }

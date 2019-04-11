@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
   }
   onSubmit = event => {
     event.preventDefault()
-    this.props.onSubmit()
+    this.props.onSubmit(event)
   }
   render() {
     return (

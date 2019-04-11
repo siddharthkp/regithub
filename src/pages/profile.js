@@ -5,7 +5,7 @@ import Input from '../components/input'
 import Switch from '../components/switch'
 import Button from '../components/button'
 import Alert from '../components/alert'
-import Icon from '../components/icon'
+// import Icon from '../components/icon'
 
 function Profile(props) {
   return (
