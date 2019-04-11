@@ -18,7 +18,7 @@ function Profile(props) {
       <div>
         past: Design Systems at Auth0, Frontend Architect Practo
       </div>
-      <a href="/login" className="start">
+      <a href="/talk" className="start">
         →
       </a>
     </div>

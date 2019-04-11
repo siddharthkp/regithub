@@ -5,6 +5,7 @@ import Spinner from './components/spinner'
 import LoginScreen from './pages/login'
 import ProfileScreen from './pages/profile'
 import Home from './pages/home'
+import Talk from './pages/talk'
 import Bye from './pages/bye'
 import './App.css'
 
@@ -65,6 +66,7 @@ const App = () => {
       {loading ? <Spinner /> : null}
       <Router>
         <Home path="/" />
+        <Talk path="/talk" />
         <Login path="/login" />
         <Profile path="profile" />
         <Bye path="/bye" />
