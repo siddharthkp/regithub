@@ -54,7 +54,7 @@ function Profile(props) {
           defaultValue={props.user.social.website}
         />
         <Button>Save</Button>
-        <a href="/bye" className="start">
+        <a href="/list" className="start">
           →
         </a>
       </Form>

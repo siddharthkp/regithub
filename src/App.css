@@ -368,3 +368,11 @@ h2 {
 .invisible::selection {
   color: #316de0;
 }
+
+ol {
+  font-size: 18px;
+  text-align: left;
+}
+ol li {
+  padding: 10px 0;
+}
