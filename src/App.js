@@ -55,10 +55,18 @@ const App = () => {
   }
 
   let Login = () => (
-    <LoginScreen user={user} onSubmit={navigateToProfile} />
+    <>
+      <LoginScreen user={user} onSubmit={navigateToProfile} />
+      <InvisibleText1 />
+    </>
   )
 
-  let Profile = () => <ProfileScreen user={user} onSubmit={noop} />
+  let Profile = () => (
+    <>
+      <ProfileScreen user={user} onSubmit={noop} />
+      <InvisibleText2 />
+    </>
+  )
 
   return (
     <div className="App">
@@ -71,7 +79,6 @@ const App = () => {
         <Profile path="profile" />
         <Bye path="/bye" />
       </Router>
-      <InvisibleText />
     </div>
   )
 }
@@ -80,9 +87,9 @@ export default App
 
 function noop() {}
 
-function InvisibleText() {
+function InvisibleText1() {
   return (
-    <div class="invisible">
+    <div className="invisible">
       Give names to behavior not interaction
       <br />
       Aim for a minimal API surface area
@@ -91,5 +98,11 @@ function InvisibleText() {
       <br />
       Single responsibility principle
     </div>
+  )
+}
+
+function InvisibleText2() {
+  return (
+    <div className="invisible">Just use children (composition)</div>
   )
 }
