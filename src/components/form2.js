@@ -11,7 +11,9 @@ function Form({ className, ...props }) {
     function(child) {
       if (props.disabled) {
         return React.cloneElement(child, { disabled: props.disabled })
-      } else return child
+      } else {
+        return child
+      }
     }
   )
 
