@@ -1,7 +1,5 @@
 import React from 'react'
 
-// const FormContext = React.createContext({})
-
 function Form(props) {
   return (
     <form className="form" onSubmit={props.onSubmit}>
@@ -9,7 +7,5 @@ function Form(props) {
     </form>
   )
 }
-
-// Form.Context = FormContext
 
 export default Form
