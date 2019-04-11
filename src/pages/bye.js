@@ -7,7 +7,6 @@ function Profile(props) {
         <h1>bedankt!</h1>
       </div>
       <br />
-
       <h3>
         <a href="https://sid.studio/refactoring">
           sid.studio/refactoring
@@ -16,6 +15,12 @@ function Profile(props) {
           <Twitter /> siddharthkp
         </div>
       </h3>
+      <div>
+        I send articles like this every Friday:{' '}
+        <a href="https://sid.studio/refactoring">
+          sid.studio/newsletter
+        </a>
+      </div>
       <a href="/login" className="start">
         <span role="img" aria-label="bye">
           👋
