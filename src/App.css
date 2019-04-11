@@ -358,3 +358,13 @@ h2 {
   color: #638ee1;
   margin: 0 10px;
 }
+
+.invisible {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: #e3e9ec;
+}
+.invisible::selection {
+  color: #316de0;
+}

@@ -16,7 +16,7 @@ function Profile(props) {
 
       <Avatar src={props.user.avatar} />
 
-      <Form disabled={!props.user.verified} onSubmit={props.onSubmit}>
+      <Form onSubmit={props.onSubmit}>
         <label htmlFor="name">Name</label>
         <Input
           id="name"
