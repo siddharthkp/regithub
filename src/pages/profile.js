@@ -1,6 +1,6 @@
 import React from 'react'
 import Avatar from '../components/avatar'
-import Form from '../components/form'
+import Form from '../components/form2'
 import Input from '../components/input'
 import Switch from '../components/switch'
 import Button from '../components/button'
