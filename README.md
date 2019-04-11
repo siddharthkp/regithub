@@ -40,7 +40,7 @@ MIT © [siddharthkp](https://github.com/siddharthkp)
 1. Props not state
 2. Give names to interactions not behavior
 3. Feature envy
-4. Single responsibility principle
-5. Order of props
+4. Order of props
+5. Single responsibility principle
 6. Just use children
 7. clone element

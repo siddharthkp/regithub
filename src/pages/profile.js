@@ -11,15 +11,12 @@ function Profile(props) {
   return (
     <div className="profile">
       {props.user.verified ? null : (
-        <Alert>
-          <Icon name="warning" />
-          You need to click the vertification link in your email!
-        </Alert>
+        <Alert message="You need to click the vertification link in your email!" />
       )}
 
       <Avatar src={props.user.avatar} />
 
-      <Form onSubmit={props.onSubmit} disabled={!props.user.verified}>
+      <Form disabled={!props.user.verified} onSubmit={props.onSubmit}>
         <label htmlFor="name">Name</label>
         <Input
           id="name"
@@ -35,16 +32,12 @@ function Profile(props) {
           defaultValue={props.user.email}
         />
 
-        {props.user.email ? (
-          <React.Fragment>
-            <label htmlFor="show_email">Show email on profile?</label>
-            <Switch
-              id="show_email"
-              name="show_email"
-              defaultValue={props.user.show_email}
-            />
-          </React.Fragment>
-        ) : null}
+        <label htmlFor="show_email">Show email on profile?</label>
+        <Switch
+          id="show_email"
+          name="show_email"
+          defaultValue={props.user.show_email}
+        />
 
         <label htmlFor="twitter">Twitter</label>
         <Input

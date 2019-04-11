@@ -13,7 +13,7 @@ function Profile(props) {
       <div>
         I build tools and services for frontend developers. <br />
         <br />
-        bundlesize <d /> react.games <d /> tinyreact.email
+        bundlesize <small /> react.games <small /> tinyreact.email
       </div>
       <div>
         past: Design Systems at Auth0, Frontend Architect Practo

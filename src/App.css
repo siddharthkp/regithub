@@ -352,7 +352,7 @@ h3 {
 h2 {
   color: #316de0;
 }
-d::before {
+.home small::before {
   content: '•';
 
   color: #638ee1;

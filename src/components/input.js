@@ -1,8 +1,8 @@
 import React from 'react'
-import Form from './form'
+import useFormContext from './use-form-context'
 
 function Input(props) {
-  const { disabled } = React.useContext(Form.Context)
+  const { disabled } = useFormContext(props)
 
   return <input {...props} disabled={disabled} />
 }

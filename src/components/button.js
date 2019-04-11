@@ -1,11 +1,8 @@
 import React from 'react'
-import Form from './form'
+import useFormContext from './use-form-context'
 
 function Button(props) {
-  let disabled = false
-
-  const FormContext = React.useContext(Form.Context)
-  if (FormContext) disabled = FormContext.disabled
+  const { disabled } = useFormContext(props)
 
   return <button {...props} disabled={disabled} />
 }

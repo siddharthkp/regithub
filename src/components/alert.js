@@ -1,11 +1,7 @@
 import React from 'react'
 
 function Alert(props) {
-  return (
-    <div className="alert" {...props}>
-      {props.children}
-    </div>
-  )
+  return <div className="alert">{props.message}</div>
 }
 
 export default Alert
