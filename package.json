@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "axios": "0.18.0",
     "react": "16.7.0-alpha.0",
     "react-dom": "16.7.0-alpha.0",
@@ -26,7 +27,8 @@
   ],
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 70
   },
   "devDependencies": {
     "react-testing-library": "5.2.3",

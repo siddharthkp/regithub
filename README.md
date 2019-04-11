@@ -34,3 +34,13 @@ yarn dev
 #### license
 
 MIT © [siddharthkp](https://github.com/siddharthkp)
+
+### order
+
+1. Props not state
+2. Give names to interactions not behavior
+3. Feature envy
+4. Single responsibility principle
+5. Order of props
+6. Just use children
+7. clone element
