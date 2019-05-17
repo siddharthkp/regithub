@@ -6,14 +6,18 @@ function Profile(props) {
     <div className="home">
       <Avatar src="https://twitter-avatar.now.sh/siddharthkp" />
       <h2>Sid</h2>
-      Independent developer, India
+
       <div>
         <Twitter /> siddharthkp
       </div>
       <div>
         I build tools and services for frontend developers. <br />
         <br />
+        <br />
         bundlesize <small /> react.games <small /> tinyreact.email
+        <br />
+        <br />
+        8.4k ⭐ <span style={{ paddingRight: 20 }} /> 7.8M ⬇️
       </div>
       <div>
         past: Design Systems at Auth0, Frontend Architect Practo

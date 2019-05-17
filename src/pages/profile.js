@@ -5,18 +5,21 @@ import Input from '../components/input'
 import Switch from '../components/switch'
 import Button from '../components/button'
 import Alert from '../components/alert'
-// import Icon from '../components/icon'
+import Icon from '../components/icon'
 
 function Profile(props) {
   return (
     <div className="profile">
       {props.user.verified ? null : (
-        <Alert message="You need to click the vertification link in your email!" />
+        <Alert>
+          <Icon name="warning" />
+          You need to click the vertification link in your email!
+        </Alert>
       )}
 
       <Avatar src={props.user.avatar} />
 
-      <Form onSubmit={props.onSubmit}>
+      <Form disabled={!props.user.verified} onSubmit={props.onSubmit}>
         <label htmlFor="name">Name</label>
         <Input
           id="name"
@@ -32,12 +35,16 @@ function Profile(props) {
           defaultValue={props.user.email}
         />
 
-        <label htmlFor="show_email">Show email on profile?</label>
-        <Switch
-          id="show_email"
-          name="show_email"
-          defaultValue={props.user.show_email}
-        />
+        {props.user.email ? (
+          <React.Fragment>
+            <label htmlFor="show_email">Show email on profile?</label>
+            <Switch
+              id="show_email"
+              name="show_email"
+              defaultValue={props.user.show_email}
+            />
+          </React.Fragment>
+        ) : null}
 
         <label htmlFor="twitter">Twitter</label>
         <Input

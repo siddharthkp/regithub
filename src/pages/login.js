@@ -4,54 +4,44 @@ import Form from '../components/form'
 import Input from '../components/input'
 import Switch from '../components/switch'
 
-class LoginForm extends React.Component {
-  constructor(props) {
-    super(props)
+function LoginForm(props) {
+  const name = props.user.name.first || 'you'
 
-    this.state = {
-      name: props.user.name.first || 'you',
-      remember: false,
-      disabled: true
-    }
-  }
-  onRememberToggle = () => {
-    this.setState({ remember: !this.state.remember })
-  }
-  onChange = event => {
-    const disabled = event.target.value.length === 0
-    this.setState({ disabled })
-  }
-  onSubmit = event => {
-    event.preventDefault()
-    this.props.onSubmit(event)
-  }
-  render() {
-    return (
-      <div className="login-form">
-        <Avatar />
+  const [disabled, onPasswordChange] = useSmartness(true)
 
-        <div>Welcome back, {this.state.name}!</div>
+  return (
+    <div className="login-form">
+      <Avatar />
 
-        <Form onSubmit={this.onSubmit}>
-          <Input
-            onChange={this.onChange}
-            type="password"
-            name="password"
-            placeholder="enter your password"
-          />
+      <div>Welcome back, {name}!</div>
 
-          <button type="submit" disabled={this.state.disabled}>
-            Log in
-          </button>
+      <Form onSubmit={props.onSubmit}>
+        <Input
+          onChange={onPasswordChange}
+          type="password"
+          name="password"
+          placeholder="enter your password"
+        />
 
-          <Switch
-            label="Remember me"
-            onClick={this.onRememberToggle}
-          />
-        </Form>
-      </div>
-    )
-  }
+        <button type="submit" disabled={disabled}>
+          Log in
+        </button>
+
+        <Switch label="Remember me" />
+      </Form>
+    </div>
+  )
 }
 
 export default LoginForm
+
+function useSmartness(defaultState) {
+  const [disabled, setDisabled] = React.useState(defaultState)
+
+  const onChange = event => {
+    const disabled = event.target.value.length === 0
+    setDisabled(disabled)
+  }
+
+  return [disabled, onChange]
+}

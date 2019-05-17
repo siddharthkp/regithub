@@ -1,8 +1,17 @@
 import React from 'react'
 
-function Form(props) {
+function Form({ className, ...props }) {
+  const onSubmit = event => {
+    event.preventDefault()
+    props.onSubmit(event)
+  }
+
   return (
-    <form className="form" onSubmit={props.onSubmit}>
+    <form
+      {...props}
+      className={`form ${className}`}
+      onSubmit={onSubmit}
+    >
       {props.children}
     </form>
   )

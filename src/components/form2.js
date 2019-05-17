@@ -1,21 +1,12 @@
 import React from 'react'
 
+const FormContext = React.createContext({})
+
 function Form({ className, ...props }) {
   const onSubmit = event => {
     event.preventDefault()
     props.onSubmit(event)
   }
-
-  const enhancedChildren = React.Children.map(
-    props.children,
-    function(child) {
-      if (props.disabled) {
-        return React.cloneElement(child, { disabled: props.disabled })
-      } else {
-        return child
-      }
-    }
-  )
 
   return (
     <form
@@ -23,11 +14,13 @@ function Form({ className, ...props }) {
       {...props}
       onSubmit={onSubmit}
     >
-      {enhancedChildren}
+      <FormContext.Provider value={{ disabled: props.disabled }}>
+        {props.children}
+      </FormContext.Provider>
     </form>
   )
 }
 
-// Form.Context = FormContext
+Form.Context = FormContext
 
 export default Form

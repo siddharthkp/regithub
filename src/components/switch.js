@@ -1,5 +1,5 @@
 import React from 'react'
-// import Form from './form2'
+import Form from './form2'
 
 function Switch(props) {
   const { disabled } = useFormContext(props)
@@ -30,8 +30,8 @@ export default Switch
 function useFormContext(props) {
   let disabled = props.disabled
 
-  // const context = React.useContext(Form.Context || {})
-  // if (context) disabled = context.disabled
+  const context = React.useContext(Form.Context || {})
+  if (context) disabled = context.disabled
 
   return { disabled }
 }
