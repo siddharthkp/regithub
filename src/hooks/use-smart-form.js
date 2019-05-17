@@ -12,3 +12,18 @@ function useSmartForm() {
 }
 
 export default useSmartForm
+
+/*
+
+
+
+
+
+
+
+
+let formDisabled = true
+if (disabledList.every(disabled => disabled === false)) {
+  formDisabled = false
+}
+*/
