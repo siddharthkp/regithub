@@ -94,9 +94,3 @@ function InvisibleText1() {
     </div>
   )
 }
-
-function InvisibleText2() {
-  return (
-    <div className="invisible">Just use children (composition)</div>
-  )
-}
