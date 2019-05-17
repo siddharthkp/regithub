@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginForm from './pages/login2'
+import LoginForm from './pages/login'
 import user from './user.stub'
 
 import { render, fireEvent, cleanup } from 'react-testing-library'

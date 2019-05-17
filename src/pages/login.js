@@ -6,7 +6,6 @@ import useSmartForm from '../hooks/use-smart-form'
 
 function LoginForm(props) {
   const name = props.user.name
-
   const [disabled, onChange] = useSmartForm()
 
   return (
@@ -16,10 +15,11 @@ function LoginForm(props) {
       <div>Welcome back, {name}!</div>
 
       <Form onSubmit={props.onSubmit}>
+        <label htmlFor="password">Password</label>
         <Input
-          onChange={onChange}
+          id="password"
           type="password"
-          name="password"
+          onChange={onChange}
           placeholder="enter your password"
         />
 

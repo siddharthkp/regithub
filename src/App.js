@@ -3,7 +3,6 @@ import { Router, navigate } from '@reach/router'
 import Header from './components/header'
 import Spinner from './components/spinner'
 import LoginScreen from './pages/login'
-import LoginScreen2 from './pages/login2'
 import ProfileScreen from './pages/profile'
 import Home from './pages/home'
 import Talk from './pages/talk'
@@ -22,7 +21,6 @@ import './App.css'
 
 const user = {
   username: 'sid',
-  // name: { first: 'Sid', last: 'Kshetrapal' },
   name: 'Sid',
   fullName: 'Siddharth Kshetrapal',
   email: 'siddharth.kshetrapal@gmail.com',
@@ -51,7 +49,7 @@ const App = () => {
   function navigateToProfile() {
     setLoading(true)
     setTimeout(function() {
-      navigate('/login2')
+      navigate('/list')
       setLoading(false)
     }, 1000)
   }
@@ -63,13 +61,6 @@ const App = () => {
     </>
   )
 
-  let Login2 = () => (
-    <>
-      <LoginScreen2 user={user} />
-      <InvisibleText2 />
-    </>
-  )
-
   return (
     <div className="App">
       <Header />
@@ -78,7 +69,6 @@ const App = () => {
         <Home path="/" />
         <Talk path="/talk" />
         <Login path="/login" />
-        <Login2 path="/login2" />
         <ProfileScreen user={user} path="/profile" />
         <List path="/list" />
         <Bye path="/bye" />
