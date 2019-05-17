@@ -4,23 +4,20 @@ function Profile(props) {
   return (
     <div className="home">
       <div>
-        <h1>bedankt!</h1>
+        <h1>Thanks!</h1>
       </div>
       <br />
       <h3>
-        <a href="https://sid.studio/refactoring">
-          sid.studio/refactoring
-        </a>
+        <div>
+          I send articles like this every Friday:{' '}
+          <a href="https://sid.studio/newsletter">
+            sid.studio/newsletter
+          </a>
+        </div>
         <div>
           <Twitter /> siddharthkp
         </div>
       </h3>
-      <div>
-        I send articles like this every Friday:{' '}
-        <a href="https://sid.studio/refactoring">
-          sid.studio/newsletter
-        </a>
-      </div>
 
       <span role="img" aria-label="bye">
         👋

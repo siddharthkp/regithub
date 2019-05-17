@@ -57,7 +57,6 @@ const App = () => {
   let Login = () => (
     <>
       <LoginScreen user={user} onSubmit={navigateToProfile} />
-      <InvisibleText1 />
     </>
   )
 
@@ -78,19 +77,3 @@ const App = () => {
 }
 
 export default App
-
-// function noop() {}
-
-function InvisibleText1() {
-  return (
-    <div className="invisible">
-      Give names to behavior not interaction
-      <br />
-      Aim for a minimal API surface area
-      <br />
-      Order of props is important
-      <br />
-      Single responsibility principle
-    </div>
-  )
-}
