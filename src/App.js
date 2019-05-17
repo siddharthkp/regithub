@@ -89,7 +89,7 @@ const App = () => {
 
 export default App
 
-function noop() {}
+// function noop() {}
 
 function InvisibleText1() {
   return (
