@@ -5,21 +5,25 @@ import Input from '../components/input'
 import useSmartForm from '../hooks/use-smart-form'
 
 function LoginForm(props) {
-  const name = props.user.name
-
   const [disabled, onChange] = useSmartForm()
 
   return (
     <div className="login-form">
       <Avatar />
 
-      <div>Welcome back, {name}!</div>
-
       <Form onSubmit={props.onSubmit}>
+        <label htmlFor="username">Username</label>
         <Input
-          onChange={onChange}
+          type="text"
+          id="username"
+          placeholder="enter your username"
+          autoComplete="off"
+        />
+        <label htmlFor="password">Password</label>
+        <Input
+          id="password"
           type="password"
-          name="password"
+          onChange={onChange}
           placeholder="enter your password"
         />
 

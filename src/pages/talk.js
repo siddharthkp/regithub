@@ -4,7 +4,7 @@ function Talk(props) {
   return (
     <div className="home">
       <div>
-        <h1>Refactoring React</h1>
+        <h1>Just in time testing</h1>
       </div>
       <br />
       <div className="start">
