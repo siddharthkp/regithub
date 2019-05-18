@@ -57,6 +57,10 @@ const App = () => {
   let Login = () => (
     <>
       <LoginScreen user={user} onSubmit={navigateToProfile} />
+
+      <blockquote className="invisible">
+        make the change easy, then make the easy change – Kent Beck
+      </blockquote>
     </>
   )
 
