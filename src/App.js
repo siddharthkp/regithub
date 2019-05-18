@@ -58,8 +58,14 @@ const App = () => {
     <>
       <LoginScreen user={user} onSubmit={navigateToProfile} />
 
+      <div className="invisible">Shotgun surgery</div>
+
       <blockquote className="invisible">
-        make the change easy, then make the easy change – Kent Beck
+        Make the change easy, then make the easy change – Kent Beck
+      </blockquote>
+
+      <blockquote className="invisible">
+        Preparatory refactor
       </blockquote>
     </>
   )
