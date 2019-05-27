@@ -13,7 +13,7 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "start": "serve -s build",
-    "test": "react-scripts test && bundlesize",
+    "test": "react-scripts test && yarn build && bundlesize",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
