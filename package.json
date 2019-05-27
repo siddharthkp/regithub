@@ -13,7 +13,7 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "start": "serve -s build",
-    "test": "react-scripts test",
+    "test": "react-scripts test && bundlesize",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,6 +31,7 @@
     "printWidth": 70
   },
   "devDependencies": {
+    "bundlesize": "^0.17.2",
     "react-testing-library": "5.2.3",
     "serve": "10.0.2"
   },
