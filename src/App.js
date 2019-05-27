@@ -9,6 +9,7 @@ import Talk from './pages/talk'
 import List from './pages/list'
 import Bye from './pages/bye'
 import './App.css'
+import './bloat.js'
 
 /* boring
 
