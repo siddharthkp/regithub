@@ -13,6 +13,7 @@ function Profile(props) {
       <div>
         I build tools and services for frontend developers. <br />
         <br />
+        <b>shelf</b> <small />
         bundlesize <small /> react.games <small /> tinyreact.email
       </div>
       <div>
