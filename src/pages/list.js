@@ -14,7 +14,7 @@ function Profile(props) {
           Components should follow single responsibilty principle
         </li>
         <li>HOC are prone to naming conflicts</li>
-        <li>Just use children (compisition)</li>
+        <li>Just use children (composition)</li>
         <li>cloneElement vs context - choose wisely</li>
       </ol>
 
