@@ -25,6 +25,7 @@ const user = {
   firstName: 'Sid',
   fullName: 'Siddharth Kshetrapal',
   email: 'siddharth.kshetrapal@gmail.com',
+  show_email: true,
   social: {
     twitter: '@siddharthkp',
     website: 'https://sid.studio'

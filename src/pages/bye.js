@@ -17,9 +17,14 @@ function Profile(props) {
       </h3>
       <div>
         I send articles like this every Friday:{' '}
-        <a href="https://sid.studio/refactoring">
+        <a href="https://sid.studio/newsletter">
           sid.studio/newsletter
         </a>
+      </div>
+      <div>
+        Check out{' '}
+        <a href="https://sid.studio/shelf">sid.studio/shelf</a> -
+        database for frontend developers
       </div>
 
       <span role="img" aria-label="bye">

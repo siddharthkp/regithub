@@ -10,7 +10,7 @@ function Switch(props) {
         <input
           disabled={disabled}
           type="checkbox"
-          checked={props.value}
+          checked={props.value || props.defaultValue}
           onChange={props.onClick || props.onToggle || props.onChange}
         />
         <span className="slider" />
