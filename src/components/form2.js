@@ -6,16 +6,13 @@ function Form({ className, ...props }) {
     props.onSubmit(event)
   }
 
-  const enhancedChildren = React.Children.map(
-    props.children,
-    function(child) {
-      if (props.disabled) {
-        return React.cloneElement(child, { disabled: props.disabled })
-      } else {
-        return child
-      }
+  const enhancedChildren = props.children.map(function(child) {
+    if (props.disabled) {
+      return React.cloneElement(child, { disabled: props.disabled })
+    } else {
+      return child
     }
-  )
+  })
 
   return (
     <form
