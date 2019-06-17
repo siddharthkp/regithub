@@ -26,13 +26,3 @@ function Profile(props) {
 }
 
 export default Profile
-
-function Twitter() {
-  return (
-    <img
-      style={{ height: 16, position: 'relative', top: 2 }}
-      alt="t"
-      src="http://pngimg.com/uploads/twitter/twitter_PNG34.png"
-    />
-  )
-}

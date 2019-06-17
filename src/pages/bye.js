@@ -4,7 +4,7 @@ function Profile(props) {
   return (
     <div className="home">
       <div>
-        <h1>bedankt!</h1>
+        <h1>Thanks!</h1>
       </div>
       <br />
       <h3>
